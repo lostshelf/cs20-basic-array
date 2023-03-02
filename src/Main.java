@@ -8,12 +8,15 @@ public class Main {
         four();
         six();
         sixExtra();
-        eight();
+        System.out.println(eight());
+        System.out.println("---------");
 
         int[] arr = { 1, 2, 3, 4, 5 };
 
         System.out.println(eightExtra(arr));
+        System.out.println("---------");
         System.out.println(ten(arr, arr.clone()));
+        System.out.println("---------");
     }
     // Using the actual classes instead of the primitives otherwise I can't print them out with the function I made
     // Should still be exactly the same except it makes my life easier this way
@@ -26,12 +29,15 @@ public class Main {
             System.out.print(doubleArray[i] + " ");
 
         System.out.println();
+        System.out.println("---------");
     }
 
     // Question 4
     static void four() {
         Integer[] intArray = new Integer[rand.nextInt(21) + 5];
         printArray(intArray);
+
+        System.out.println("---------");
     }
 
     // Question 6
@@ -46,6 +52,8 @@ public class Main {
         printArray(stringArray1);
         printArray(stringArray2);
         printArray(combined);
+
+        System.out.println("---------");
     }
 
     // Question 6 EXTRA
@@ -64,6 +72,8 @@ public class Main {
         printArray(stringArray1);
         printArray(stringArray2);
         printArray(combined);
+
+        System.out.println("---------");
     }
 
     // Create an array of 10 random integer values and output whether it is sorted in ascending order or not
