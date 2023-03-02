@@ -44,11 +44,17 @@ public class Main {
 
     // Question 6
     static void six() {
+        // Initial array
         String[] stringArray1 = { "a", "b", "c", "d", "e" };
         String[] stringArray2 = { "a", "b", "c", "d", "e" };
 
+        // New array that will hold both of the above arrays
         String[] combined = new String[stringArray1.length + stringArray2.length];
+
+        // Copy the first array, starting from the first element of both arrays
         System.arraycopy(stringArray1, 0, combined, 0, stringArray1.length);
+
+        // Copy the second array, starting from the first element and adding it onto the end of the combined array
         System.arraycopy(stringArray2, 0, combined, stringArray1.length, stringArray2.length);
 
         printArray(stringArray1);
@@ -93,23 +99,32 @@ public class Main {
     }
 
     static boolean eightExtra(int[] arr) {
+        // Check if the original array is equal to the sorted array
         return Arrays.equals(arr, Arrays.stream(arr).sorted().toArray());
     }
 
     static int ten(int[] a, int[] b) {
-        return Arrays.stream(a).filter(x -> {
-            for (int i : b)
-                if (i == x)
-                    return true;
+        // Filter out elements that aren't in both arrays
+        return Arrays.stream(a)
+            .filter(x -> {
+                // Loop through all the elements and return true if it is in both arrays otherwise, return false
+                for (int i : b)
+                    if (i == x)
+                        return true;
 
-            return false;
-        }).toArray().length;
+                return false;
+            })
+            // Convert the IntStream from the filter function into an array and return its length
+            .toArray()
+            .length;
     }
 
     public static <T> void printArray(T[] arr) {
+        // Loop through array and print every element
         for (T i : arr)
             System.out.print(i + " ");
 
+        // Print a new line for better formatting
         System.out.println();
     }
 }
