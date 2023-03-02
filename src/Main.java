@@ -20,7 +20,7 @@ public class Main {
         System.out.println(ten(arr, arr.clone()));
         System.out.println("---------");
     }
-    // Using the actual classes instead of the primitives otherwise I can't print them out with the function I made
+    // Using the actual classes instead of the primitives in some functions as otherwise I can't print them out with the function I made
     // Should still be exactly the same except it makes my life easier this way
     // I can redo it with the actual primitive types instead if you want
 
