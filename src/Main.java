@@ -9,6 +9,8 @@ public class Main {
         six();
         sixExtra();
         System.out.println(eight());
+
+        // These were added for better formatting
         System.out.println("---------");
 
         int[] arr = { 1, 2, 3, 4, 5 };
